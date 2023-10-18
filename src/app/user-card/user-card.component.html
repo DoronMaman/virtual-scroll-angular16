@@ -1,0 +1,12 @@
+<!-- user-card.component.html -->
+<cdk-virtual-scroll-viewport itemSize="100" class="viewport">
+    <div *cdkVirtualFor="let user of (users$|async)" class="cards">
+      <div class="card">
+        <img [src]="user.img" alt="">
+        <h4>{{user.name}}</h4>
+        <small>{{user.email}}</small>
+        <button>Connect</button>
+      </div>
+    </div>
+  </cdk-virtual-scroll-viewport>
+  
